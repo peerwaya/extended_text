@@ -11,13 +11,13 @@ class MySpecialTextSpanBuilder extends SpecialTextSpanBuilder {
   MySpecialTextSpanBuilder({this.showAtBackground: false});
 
   @override
-  TextSpan build(String data, {TextStyle textStyle, onTap}) {
-    var textSpan = super.build(data, textStyle: textStyle, onTap: onTap);
+  TextSpan build(BuildContext context, String data, {TextStyle textStyle, onTap}) {
+    var textSpan = super.build(context, data, textStyle: textStyle, onTap: onTap);
     return textSpan;
   }
 
   @override
-  SpecialText createSpecialText(String flag,
+  SpecialText createSpecialText(BuildContext context, String flag,
       {TextStyle textStyle, SpecialTextGestureTapCallback onTap, int index}) {
     if (flag == null || flag == "") return null;
 

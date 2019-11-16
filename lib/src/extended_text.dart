@@ -196,7 +196,7 @@ class ExtendedText extends StatelessWidget {
       effectiveTextStyle = effectiveTextStyle
           .merge(const TextStyle(fontWeight: FontWeight.bold));
 
-    TextSpan innerTextSpan = specialTextSpanBuilder?.build(data,
+    TextSpan innerTextSpan = specialTextSpanBuilder?.build(context, data,
         textStyle: effectiveTextStyle, onTap: onSpecialTextTap);
 
     if (innerTextSpan == null)
